@@ -25,8 +25,8 @@ A complete bird detection, tracking, and counting application using YOLO11n on C
 
 ```bash
 # Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install requirements
 pip install -r requirements.txt
@@ -36,8 +36,10 @@ pip install -r requirements.txt
 
 ```
 bird_poc/
-├── app.py                       # Streamlit frontend
-├── bird_detector_api.py        # FastAPI backend
+├── frontend/                   # frontend folder
+│   └── app.py                  # Streamlit frontend
+├── backend                     # backend folder
+│   └── bird_detector_api.py    # fastAPI
 ├── requirements.txt            # Python dependencies
 ├── .streamlit/
 │   └── secrets.toml           # Configuration (create this file)
@@ -49,7 +51,7 @@ bird_poc/
 Open **Terminal 1**:
 
 ```bash
-python bird_detector_api.py
+python backend/bird_detector_api.py
 ```
 
 Expected output:
@@ -64,7 +66,7 @@ Uvicorn running on http://0.0.0.0:8000
 Open **Terminal 2**:
 
 ```bash
-streamlit run app.py
+streamlit run frontend/app.py
 ```
 
 The app will open at `http://localhost:8501`
