@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ### Step 2: Create Directory Structure
 
 ```
-bird_poc/
+bird_detactor/
 ├── frontend/                   # frontend folder
 │   └── app.py                  # Streamlit frontend
 ├── backend                     # backend folder
